@@ -73,25 +73,25 @@ public class AirHockey extends JPanel implements ActionListener, KeyListener {
         if (ballX >= WIDTH - 90 && ballY + BALL_SIZE >= paddle2Y && ballY <= paddle2Y + PADDLE_HEIGHT) {
             ballVelocityX *= -1;
         }
-//
-//        // Gol urilganida
-//        if (ballX <= 0) {
-//            score2++;
-//            resetBall();
-//        }
-//        if (ballX >= WIDTH - BALL_SIZE) {
-//            score1++;
-//            resetBall();
-//        }
-//
-//        repaint();
-//    }
 
-//    private void resetBall() {
-//        ballX = WIDTH / 2 - BALL_SIZE / 2;
-//        ballY = HEIGHT / 2 - BALL_SIZE / 2;
-//        ballVelocityX = -ballVelocityX;
-//    }
+        // Gol urilganida
+        if (ballX <= 0) {
+            score2++;
+            resetBall();
+        }
+        if (ballX >= WIDTH - BALL_SIZE) {
+            score1++;
+            resetBall();
+        }
+
+        repaint();
+    }
+
+    private void resetBall() {
+        ballX = WIDTH / 2 - BALL_SIZE / 2;
+        ballY = HEIGHT / 2 - BALL_SIZE / 2;
+        ballVelocityX = -ballVelocityX;
+    }
 
 //    @Override
 //    public void keyPressed(KeyEvent e) {
