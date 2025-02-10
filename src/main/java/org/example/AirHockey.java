@@ -93,37 +93,37 @@ public class AirHockey extends JPanel implements ActionListener, KeyListener {
         ballVelocityX = -ballVelocityX;
     }
 
-//    @Override
-//    public void keyPressed(KeyEvent e) {
-//        if (e.getKeyCode() == KeyEvent.VK_W && paddle1Y > 0) {
-//            paddle1Y -= paddleSpeed;
-//        }
-//        if (e.getKeyCode() == KeyEvent.VK_S && paddle1Y < HEIGHT - PADDLE_HEIGHT) {
-//            paddle1Y += paddleSpeed;
-//        }
-//        if (e.getKeyCode() == KeyEvent.VK_UP && paddle2Y > 0) {
-//            paddle2Y -= paddleSpeed;
-//        }
-//        if (e.getKeyCode() == KeyEvent.VK_DOWN && paddle2Y < HEIGHT - PADDLE_HEIGHT) {
-//            paddle2Y += paddleSpeed;
-//        }
-//    }
+    @Override
+    public void keyPressed(KeyEvent e) {
+        if (e.getKeyCode() == KeyEvent.VK_W && paddle1Y > 0) {
+            paddle1Y -= paddleSpeed;
+        }
+        if (e.getKeyCode() == KeyEvent.VK_S && paddle1Y < HEIGHT - PADDLE_HEIGHT) {
+            paddle1Y += paddleSpeed;
+        }
+        if (e.getKeyCode() == KeyEvent.VK_UP && paddle2Y > 0) {
+            paddle2Y -= paddleSpeed;
+        }
+        if (e.getKeyCode() == KeyEvent.VK_DOWN && paddle2Y < HEIGHT - PADDLE_HEIGHT) {
+            paddle2Y += paddleSpeed;
+        }
+    }
 
-//    @Override
-//    public void keyReleased(KeyEvent e) {
-//    }
-//
-//    @Override
-//    public void keyTyped(KeyEvent e) {
-//    }
+    @Override
+    public void keyReleased(KeyEvent e) {
+    }
 
-//    public static void main(String[] args) {
-//        JFrame frame = new JFrame("Air Hockey");
-//        AirHockey game = new AirHockey();
-//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        frame.add(game);
-//        frame.pack();
-//        frame.setLocationRelativeTo(null);
-//        frame.setVisible(true);
-//    }
+    @Override
+    public void keyTyped(KeyEvent e) {
+    }
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Air Hockey");
+        AirHockey game = new AirHockey();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.add(game);
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+    }
 }
