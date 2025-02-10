@@ -56,23 +56,23 @@ public class AirHockey extends JPanel implements ActionListener, KeyListener {
         g.fillOval(ballX, ballY, BALL_SIZE, BALL_SIZE);
     }
 
-//    @Override
-//    public void actionPerformed(ActionEvent e) {
-//        ballX += ballVelocityX;
-//        ballY += ballVelocityY;
-//
-//        // Devorlarga urilganda yo'nalishni o'zgartirish
-//        if (ballY <= 0 || ballY >= HEIGHT - BALL_SIZE) {
-//            ballVelocityY *= -1;
-//        }
-//
-//        // Raketkalarga tegish
-//        if (ballX <= 70 && ballY + BALL_SIZE >= paddle1Y && ballY <= paddle1Y + PADDLE_HEIGHT) {
-//            ballVelocityX *= -1;
-//        }
-//        if (ballX >= WIDTH - 90 && ballY + BALL_SIZE >= paddle2Y && ballY <= paddle2Y + PADDLE_HEIGHT) {
-//            ballVelocityX *= -1;
-//        }
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        ballX += ballVelocityX;
+        ballY += ballVelocityY;
+
+        // Devorlarga urilganda yo'nalishni o'zgartirish
+        if (ballY <= 0 || ballY >= HEIGHT - BALL_SIZE) {
+            ballVelocityY *= -1;
+        }
+
+        // Raketkalarga tegish
+        if (ballX <= 70 && ballY + BALL_SIZE >= paddle1Y && ballY <= paddle1Y + PADDLE_HEIGHT) {
+            ballVelocityX *= -1;
+        }
+        if (ballX >= WIDTH - 90 && ballY + BALL_SIZE >= paddle2Y && ballY <= paddle2Y + PADDLE_HEIGHT) {
+            ballVelocityX *= -1;
+        }
 //
 //        // Gol urilganida
 //        if (ballX <= 0) {
