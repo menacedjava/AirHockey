@@ -66,7 +66,7 @@ public class AirHockey extends JPanel implements ActionListener, KeyListener {
             ballVelocityY *= -1;
         }
 
-        // Raketkalarga tegish
+
         if (ballX <= 70 && ballY + BALL_SIZE >= paddle1Y && ballY <= paddle1Y + PADDLE_HEIGHT) {
             ballVelocityX *= -1;
         }
@@ -74,7 +74,7 @@ public class AirHockey extends JPanel implements ActionListener, KeyListener {
             ballVelocityX *= -1;
         }
 
-        // Gol urilganida
+
         if (ballX <= 0) {
             score2++;
             resetBall();
