@@ -116,7 +116,7 @@ public class AirHockey extends JPanel implements ActionListener, KeyListener {
     @Override
     public void keyTyped(KeyEvent e) {
     }
-
+    //main
     public static void main(String[] args) {
         JFrame frame = new JFrame("Air Hockey");
         AirHockey game = new AirHockey();
